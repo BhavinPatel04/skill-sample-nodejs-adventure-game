@@ -11,33 +11,226 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Escape the Office" startnode="1" creator="Twine" creator-version="2.2.1" ifid="008DE057-80C8-42F0-9C0B-92B59B2DFE2D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="In the office" tags="" position="975,674" size="100,100">You&#39;re in a small office, there is a door to your left and a window in front of you. A desk sits below the window piled high with paperwork.
-Do you [[explore the desk]], try to [[climb out the window]], or attempt to [[escape through the door]]?</tw-passagedata><tw-passagedata pid="2" name="explore the desk" tags="" position="1099,824" size="100,100">While rummaging through the paperwork that&#39;s piled on the desk you find a room key. The key is a perfect fit for the door, you unlock it and step out into a small corridor.
-Do you [[turn left|deadend]] or [[right|first floor]]?</tw-passagedata><tw-passagedata pid="3" name="climb out the window" tags="" position="853,825" size="100,100">You clamber on top of the desk and climb out of the window expecting your feet to land on the terrace. But there is nothing there, and you&#39;re falling.</tw-passagedata><tw-passagedata pid="4" name="escape through the door" tags="" position="975,824" size="100,100">You pull on the handle but the door is locked. Your only options are to [[explore the desk]] or [[climb out the window]].</tw-passagedata><tw-passagedata pid="5" name="first floor lift" tags="" position="901,1249" size="100,100">The doors to the elevator open. You step inside and look at buttons on the panel.
-[[press second floor|second floor]].
-[[reception]].
-[[basement]].
-Which button do you press?</tw-passagedata><tw-passagedata pid="6" name="first floor staircase" tags="" position="900,977" size="100,100">You walk over to the staircase, the coast seems clear. Do you [[go up|second floor]] or do you go [[down|reception]] the stairs?</tw-passagedata><tw-passagedata pid="7" name="basement" tags="" position="1300,1099" size="100,100">The smell of damp hits you straight away as you step into the basement. You look around but there is no exit, you&#39;re only option is to go back up.
-Do you [[take the elevator|basement lift]]? or do you [[take the stairs|basement staircase]]?</tw-passagedata><tw-passagedata pid="8" name="reception" tags="" position="1103,1101" size="100,100">You arrive in the reception, the lights are off and there is no one behind the counter. You walk over to the main entrance and try the door, it&#39;s locked.
-As you turn around to head back something jumps out from behind the reception desk, you&#39;ve been caught.</tw-passagedata><tw-passagedata pid="9" name="second floor" tags="" position="700,1100" size="100,100">You&#39;re on an empty roof terrace, there is no way out except for back down.
-Do you [[take the stairs|first floor]] or do you take the [[elevator|second floor lift]]?</tw-passagedata><tw-passagedata pid="10" name="first floor" tags="" position="900,1099" size="100,100">You&#39;re in a small opening at the end of a door lined corridor.
-There is staircase to your left and an elevator to your right. Do you [[take the stairs|first floor staircase]], take the [[elevator|first floor lift]], or [[walk down the corridor|deadend]]?</tw-passagedata><tw-passagedata pid="11" name="deadend" tags="" position="1251,827" size="100,100">As you rush down the corridor you hear footsteps following you. You pick up pace but hit a deadend.
-You can not turn back.
-Game-over.</tw-passagedata><tw-passagedata pid="12" name="basement lift" tags="" position="1300,1251" size="100,100">You call the elevator and wait in the dark for it to arrive. Straight away as the doors slide open you dive inside. You look at buttons on the panel.
-[[press second floor|second floor]].
-[[first floor]].
-[[reception]].
-Which button do you press?</tw-passagedata><tw-passagedata pid="13" name="basement staircase" tags="" position="1300,963" size="100,100">You&#39;re almost at the top of the staircase when you notice a flickering light coming from an alcove.
-You stop in your tracks unsure of whether to [[turn around|basement]] or [[carry on]] towards the light.</tw-passagedata><tw-passagedata pid="14" name="second floor lift" tags="" position="700,1247" size="100,100">You step into the elevator, glad to be out of the cold nights air.
-You look at buttons on the panel.
-[[press first floor|first floor]].
-[[reception]].
-[[basement]].
-Which button do you press?</tw-passagedata><tw-passagedata pid="15" name="carry on" tags="" position="1451,973" size="100,100">You reach the alcove and discover the flickering light is from an exit sign above a door.
-You push the door open, stumbling out onto the pavement.
-Congratulations you&#39;ve escaped the office.</tw-passagedata></tw-storydata>
+<tw-storydata name="Emergency Survival Adventure" startnode="1" creator="Twine" creator-version="2.2.1" ifid="008DE057-80C8-42F0-9C0B-92B59B2DFE2D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden>
+  <style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style>
+  <script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+  
+  <!-- Pattern: You&#39;re in a small office.. Do you try to [[name of option1|optional name override]], or attempt to [[name of option2]] or ect.? -->
+  
+  <!-- Root event -->
+  <tw-passagedata pid="1" name="emergency escape" tags="" position="975,674" size="100,100">
+  Name the emergency you must survive: [[hurricane]], [[earthquake]], [[volcanic eruption]], [[cyclone]], [[tsunami]].
+  </tw-passagedata>
+  
+  <!-- Hurricane Ray-->
+  <tw-passagedata pid="2" name="hurricane" tags="" position="1099,824" size="100,100">
+  Where are you when the hurricane is about to hit? [[indoors|hurricane indoors]] or [[outdoors|hurricane outdoors]]?   
+  </tw-passagedata>
+  <tw-passagedata pid="7" name="hurricane indoors" tags="" position="1099,824" size="100,100">
+  Good choice! Now that you are safer inside but the house could flood should you [[turn off the electricity|hurricane turn-off elecricity]] or [[cook lunch|hurricane cook lunch]]?
+  </tw-passagedata>
+  <tw-passagedata pid="8" name="hurricane outdoors" tags="" position="1099,824" size="100,100">
+  Are you sure you want to be outside during a hurricane? Hint: pick [[indoors|hurricane indoors]].   
+  </tw-passagedata>
+  <tw-passagedata pid="9" name="hurricane cook lunch" tags="" position="1099,824" size="100,100">
+  This is probably not the best time to make your favorite grilled sandwhich. Try picking [[indoors|hurricane indoors]] again.
+  </tw-passagedata>
+  <tw-passagedata pid="13" name="hurricane turn-off electricity" tags="" position="1099,824" size="100,100">
+  Gee you are one smart cookie to think of that.
+  Now do you want to go to the [[window|hurricane stay bad]], [[closet|hurricane stay good]], or [[bathroom|hurricane stay good]] on lower level?
+  </tw-passagedata>
+  <tw-passagedata pid="21" name="hurricane stay bad" tags="" position="1099,824" size="100,100">
+  Oh, being by the window is dangerous during a hurricane since they could get broken. Hint: pick [[closet|hurricane stay good]] or [[bathroom|hurricane stay good]].
+  </tw-passagedata>
+  <tw-passagedata pid="22" name="hurricane stay good" tags="" position="1099,824" size="100,100">
+  Great choice! These areas are safer indoors. After five minutes the wind seems to have calmed down outside.
+  Do you stay [[inside|hurricane inside]] or do you go [[outside|hurricane outside]] to see what's going on?
+  </tw-passagedata>
+  <tw-passagedata pid="23" name="hurricane inside" tags="" position="1099,824" size="100,100">
+  Nice! You must have known that you could be in the eye of the storm and strong winds can return quickly from the opposite direction.
+  While waiting [[listen to the radio|success]] until the all clear alert or [[go back outside|youdead]].
+  </tw-passagedata>
+  <tw-passagedata pid="24" name="hurricane outside" tags="" position="1099,824" size="100,100">
+  You step outside. It seeems eerily quiet like the eye of the storm would feel like.
+  A cow is whirling toward you faster than you can react to and everything goes dark.
+  Are you happy with your choice? [[Yes|youdead]] or [[No|hurricane stay good]] to pick again.
+  </tw-passagedata>
+  
+  <!-- Earthquake Vatsal-->
+  <tw-passagedata pid="43" name="earthquake" tags="">
+    Where are you when earthquake strikes? [[Earthquake indoors|e-indoor]] [[Earthquake outdoors|e-outdoor]].
+  </tw-passagedata>
+  <tw-passagedata pid="44" name="e-indoor" tags="">
+    You feel the earth shaking. Do you [[panic|e-panic]], [[stay calm|e-stay-calm]]?
+  </tw-passagedata>
+  
+  <tw-passagedata pid="45" name="e-panic" tags="">
+    It wont do you any good, my friend!. Try to [[stay calm|e-stay-calm]]
+  </tw-passagedata>
+  
+  <tw-passagedata pid="46" name="e-stay-calm" tags="">
+    That's good. Do you [[look outside for other people|e-look-outside] or [[stand against wall|e-stand-wall] or [[take elevators to go out|e-take-elevator]]
+  </tw-passagedata>
+  
+  <tw-passagedata pid="47" name="e-take-elevator	" tags="">
+    Don't do that. If you are inside stay inside. Elevator won't be working anyway or it may fail. Try again. Hint: [[Stay inside and stand against wall|e-stand-wall]
+  </tw-passagedata>
+  
+  <tw-passagedata pid="48" name="e-look-outside" tags="">
+    No no. Don't do that. You may get hurt fall off the window
+  </tw-passagedata>
+
+  <tw-passagedata pid="49" name="e-stand-wall" tags="">
+    That's good. If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table).
+    Now what if electricity goes away. You try to [light a candle|e-light-candle] or [[do nothing and relax|e-do-nothing]]?
+  </tw-passagedata>
+
+  <tw-passagedata pid="50" name="e-light-candle" tags="">
+    As tempting it may, it may injure you badly. There may be broken gas lines and fire mixed with it can get really bad. You may die. You want to [[die|youdead] or [[Try again and stay inside and stand against wall|e-stand-wall]
+  </tw-passagedata>
+  
+  <tw-passagedata pid="51" name="e-do-nothing" tags="">
+    You are smart! Try to sing a song instead. What if you are outside. Let's say [[in a car|e-in-car]] or [[in a park|e-in-park]]?
+  </tw-passagedata>
+
+  <tw-passagedata pid="52" name="e-in-car" tags="">
+    You try to [[speed the car to reach home ASAP|e-car-reach-home]] or [[stop the car and stay inside the car|e-stay-inside-car]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="53" name="e-car-reach-home" tags="">
+    As good it may sound, its a bad idea. You may injure yourself or worse others. Try again. Hint: [[Stay inside the car|e-stay-inside-car]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="54" name="e-in-park" tags="">
+    You are smart! Try to sing a song instead. What if you are outside. Let's say [[in a car|e-in-car]] or [[in a park|e-in-park]]?
+  </tw-passagedata>
+  
+  <tw-passagedata pid="55" name="e-outdoor" tags="">
+    You feel the earth shaking. Do you [[panic|e-panic]], [[stay calm|e-stay-calm-out]]?
+  </tw-passagedata>
+  
+  <tw-passagedata pid="56" name="e-stay-calm-out" tags="">
+    That's good. Do you [[stay outside in open|e-stay-out-open]] or [[look for buildings for shelter|e-look-building]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="57" name="e-stay-out-open" tags="">
+    Good work.Stay in the open away from power lines or anything that might fall. 
+    Stay away from buildings (stuff might fall off the building or the building could fall on you).
+  </tw-passagedata>
+  
+  <tw-passagedata pid="58" name="e-look-building" tags="">
+    Don't do that. Stuff might fall from building on you or even worse, the entire building might fall on you. You may die. Do you want to [[die|youdead] or [[Try again and stay out in the open|e-stay-out-open]]
+  </tw-passagedata>
+  <!-- Earthquake ends here. So do you-->
+  
+  <!-- Volcanic Eruption Gabriel-->
+  <tw-passagedata pid="4" name="volcanic eruption" tags="" position="975,674" size="100,100">
+  You are at home and hear on the radio that a volcano has erupted near you. You were just about to lay down for bed, but realize that you are likely in the path of a potential lava flow.
+  Do you [[take a nap|volcano nap]], [[read a book|volcano read]], or [[find a method of transport|volcano transport]]
+  </tw-passagedata>
+  <tw-passagedata pid="18" name="volcano nap" tags="" position="975,674" size="100,100">
+  You lay down to sleep, hoping to get enough energy to escape the volcano. Just as you are about to fall asleep a rapid lava flow burns through your home destroying everything in it's path.
+  You did not survive. Are you sure that you slept? [[Yes, I slept.|youdead]] [[I only thought about sleeping|volcanic Eruption]]
+  </tw-passagedata>
+  <tw-passagedata pid="19" name="volcano read" tags="" position="975,674" size="100,100">
+  You find the entry for volcanoes in the encyclopedia and try to learn as much as you can so that you can learn how to survive the eruption.
+  15 minutes later, you die, burnt to a crisp by the lava. Are you sure that you chose to read a book? [[Yes|youdead]] [No|volcanic Eruption]].
+  </tw-passagedata>
+  <tw-passagedata pid="59" name="volcano transport" tags="" position="975,674" size="100,100">
+  The transport options you find are a bicycle and a pogo stick. How do you flee? [[Bicycle|volcano bicycle]], [[Pogo stick|volcano pogo]], [[On foot|volcano run]].
+  </tw-passagedata>
+  <tw-passagedata pid="60" name="volcano bicycle" tags="" position="975,674" size="100,100">
+  Your bicycle helps you to escape quickly, but breaks down just as you reach the main road. You must run from here. The main road can take you uphill, or downhill towards the stream. Do you take it [[uphill|success]] or [[downhill|youdead]]?
+  </tw-passagedata>
+  <tw-passagedata pid="61" name="volcano pogo" tags="" position="975,674" size="100,100">
+  You bounce joyfully along towards the main road, making steady but slow progress. The lava flow soon catches you and you do not survive. Are you sure you chose the pogo stick? [[Yes|youdead]] [No|volcano transport]].
+  </tw-passagedata>
+  <tw-passagedata pid="62" name="volcano run" tags="" position="975,674" size="100,100">
+  You run towards the main road, but find that you tire quickly and the lava catches you. Did you actually run, or only think about running? [[I ran|youdead]] [[I only thought about it|volcano transport]]
+  </tw-passagedata>
+  
+  <!-- Cyclone Bhavin-->
+  <tw-passagedata pid="28" name="Emergency Escape" tags="" position="975,674" size="100,100">
+    Where are you when the cyclone is about to hit [[cyclone indoors]], [[cyclone outdoors]]?
+  </tw-passagedata>
+  <tw-passagedata pid="29" name="cyclone indoors" tags="" position="975,674" size="100,100">
+    You see about a cyclone approaching. Do you [[turn on the TV|cyclone TV]], [[turn off all appliances and find emergency kit|cyclone emergency kit]]?
+  </tw-passagedata>
+  <tw-passagedata pid="30" name="cyclone TV" tags="" position="975,674" size="100,100">
+    Umm.. maybe turning off the TV and finding an emergency kit might be a good idea. Would you like to try again? [[Yes|Cyclone Indoors]], [[No|youdead]]
+  </tw-passagedata>
+  <tw-passagedata pid="31" name="cyclone emergency kit" tags="" position="975,674" size="100,100">
+    Once you have your emergency kit would you gather your family and [[run outside|youdead]] or [[go to the strongest part of the house|cyclone strongest part]]?
+  </tw-passagedata>
+  <tw-passagedata pid="33" name="cyclone strongest part" tags="" position="975,674" size="100,100">
+    Great! You and your family should remain indoors unitl advised. Now if the building or house starts to break up. Would you [[scream and run out|youdead]] or [[seek shelter under a strong table or bench or under 
+a heavy mattress|cyclone find shelter]]
+  </tw-passagedata>
+  <tw-passagedata pid="35" name="cyclone find shelter" tags="" position="975,674" size="100,100">
+   Great! Now after a while you feel everything is calm outside. Do you [[go out and celebrate|cyclone celebrate]] or [[wait for official advice that it is safe to go outside|success]]
+  </tw-passagedata>
+  <tw-passagedata pid="36" name="cyclone celebrate" tags="" position="975,674" size="100,100">
+    One thing you need to be aware of is calm eye of the cyclone. Best advice would be to wait for official announcement that it is now safe. Would you like to wait for the announcement? [[yes|success]] [[No|youdead]]
+  </tw-passagedata>
+  <tw-passagedata pid="37" name="cyclone outdoors" tags="" position="975,674" size="100,100">
+    If you see a cyclone nearby. Would you [[take out your phone and take pictures|youdead]] or [[lie flat in a nearby ditch or depression and cover your head with your hands|cyclone lie down]]?
+  </tw-passagedata>
+  <tw-passagedata pid="39" name="cyclone lie down" tags="" position="975,674" size="100,100">
+    You see a cyclone nearby. Do you [[try to outrun it|youdead]] or [[find safe shelter|cyclone shelter]]?
+  </tw-passagedata>
+  <tw-passagedata pid="41" name="cyclone shelter" tags="" position="975,674" size="100,100">
+    While finding shelter would you [[go under an overpass or bridge|youdead]] or [[lie on low, flat location|success]]?
+  </tw-passagedata>
+  
+  
+  <!-- Tsunami Raj-->
+  <tw-passagedata pid="6" name="tsunami" tags="" position="975,674" size="100,100">
+  Where are you when a Tsunami is forecasted? [[tsunamiindoors|tsunamioutdoors]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="14" name="tsunamiindoors" tags="" position="975,674" size="100,100">
+  Would you [[turn on your radio or TV]] to learn if there is a tsunami warning if an earthquake occurs if you are near a coastal area or go outside and [[try to help others]]?
+  </tw-passagedata>
+  
+  <tw-passagedata pid="16" name="turn on your radio or TV" tags="" position="975,674" size="100,100">
+  You hear the in the news about it, [[Stay away]] from flooded and damaged areas until officials say it is safe to return.
+  Stay away from debris in the water.
+  </tw-passagedata>
+  
+  <tw-passagedata pid="17" name="try to help others" tags="" position="975,674" size="100,100">
+  That wouldn't be a good idea. Would you like to try again? [[Yes|tsunamiindoors]], [[No|youdead]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="25" name="stay away" tags="" position="975,674" size="100,100">
+  Great you have learned what you should do during a tsunami when indoors. Would you like to learn about things to do if you are outside? [[Yes|tsunamioutdoors]], [[No|game end]]
+  </tw-passagedata>
+  
+
+
+  <tw-passagedata pid="15" name="tsunamioutdoors" tags="" position="975,674" size="100,100">
+  Would you [[go out]] in the coastal areas and enjoy or try to get to [[open space]] away from coast?
+  </tw-passagedata>
+
+  <tw-passagedata pid="26" name="go out" tags="" position="975,674" size="100,100">
+  That wouldn't be a good idea. Try again? [[Yes|tsunamioutdoors]],[[No|youdead]]
+  </tw-passagedata>
+
+  <tw-passagedata pid="27" name="open space" tags="" position="975,674" size="100,100">
+  Great!! It seems thats the correct thing to do. Play Again? [[Yes|Emergency Escape]], [[No|game end]]
+  </tw-passagedata>
+  
+
+  <!-- Finished the adventure -->
+  <tw-passagedata pid="10" name="success" tags="" position="975,674" size="100,100">
+  You made it out alive! Would you like to repeat the adventure? [[Yes|Emergency Escape]], [[No|game end]]
+  </tw-passagedata>
+  <tw-passagedata pid="11" name="youdead" tags="" position="975,674" size="100,100">
+  You did not survive. Would you like to try again? [[Yes|Emergency Escape]], [[No|game end]]
+  </tw-passagedata>
+  <tw-passagedata pid="12" name="game end" tags="" position="975,674" size="100,100">
+  Goodbye until next time!
+  </tw-passagedata>
+</tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.

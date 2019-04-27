@@ -1,19 +1,48 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.57910cf2-d773-4f8f-b990-7b957990231c",
       "was_cloned": false,
       "merge": {
         "manifest": {
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-adventure-game-default"
+                "uri": "arn:aws:lambda:us-east-1:682089118530:function:ask-adventure-game-default"
               }
             }
           }
         }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "38b113be47d9b1afc53586f309284d73"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "aa994977f5e45cb2791f62bc151b44b3"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:682089118530:function:ask-adventure-game-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-adventure-game-default",
+            "handler": "index.handler",
+            "revisionId": "d6805ba6-e009-41f9-afca-8400bc32e745",
+            "runtime": "nodejs8.10"
+          }
+        ]
       }
+    },
+    "adventure-game": {
+      "skill_id": "",
+      "was_cloned": false,
+      "merge": {}
     }
   }
 }
